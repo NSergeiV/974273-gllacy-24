@@ -13,6 +13,25 @@
 			<ul class="site-navigation">
 				<li class="site-navigation-item">
 					<a href="catalog.html">Каталог</a>
+					<nav class="subdirectory-site-navigation" aria-label="Навигация подкаталогов раздела каталог">
+						<ul class="subdirectory-site-navigation-list">
+							<li>
+								<a class="subdirectory-site-navigation-item" href="novelties.html">Новинки</a>
+							</li>
+							<li>
+								<a href="#">Сливочное</a>
+							</li>
+							<li>
+								<a href="#">Щербеты</a>
+							</li>
+							<li>
+								<a href="#">Фруктовый лед</a>
+							</li>
+							<li>
+								<a href="#">Мелорин</a>
+							</li>
+						</ul>
+					</nav>
 				</li>
 				<li>
 					<a href="delivery.html">Доставка и оплата</a>
@@ -23,13 +42,13 @@
 			</ul>
 			<ul class="user-navigation">
 				<li class="user-search">
-					<a href="#">Поиск</a>
+					<a href="#" aria-label="кнопка поиска по сайту">Поиск</a>
 				</li>
 				<li class="user-logo">
-					<a href="#">Вход</a>
+					<a href="#" aria-label="кнопка входа в личный кабинет">Вход</a>
 				</li>
-				<li class="user-basket user-basket-aktiv">
-					<a href="#">Корзина</a>
+				<li class="user-basket">
+					<a href="#" aria-label="кнопка входа в корзину">2 товара</a>
 				</li>
 			</ul>
 		</nav>
@@ -189,16 +208,16 @@
 		<div class="footer-social">
 			<ul>
 				<li>
-					<a class="social-button" href="#">Твиттер</a>
+					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в твиттере">Твиттер</a>
 				</li>
 				<li>
-					<a class="social-button" href="#">Инстограм</a>
+					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в инстограмме">Инстограм</a>
 				</li>
 				<li>
-					<a class="social-button" href="#">Фейсбук</a>
+					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» на фейсбуке">Фейсбук</a>
 				</li>
 				<li>
-					<a class="social-button" href="#">Блоггер</a>
+					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в блоггер">Блоггер</a>
 				</li>
 			</ul>
 		</div>
@@ -224,8 +243,31 @@
 					<img src="img/logo-htmlacademy-small.svg" width="160" height="40" alt="Логотип HTMLacademy" >
 				</a>
 			</p>
-			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a> &copy; 2019</p>
+			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт">HTML Academy </a> &copy; 2019</p>
 		</div>
 	</footer>
+	<!-- Разметка для всплывающих окон (попап) -->
+	<section class="modal modal-basket">
+		<h2 class="visually-hidden">Ваши заказы</h2>
+		<div class="order">
+			<button type="button" class="modal-close">Удалить заказ</button>
+			<a class="selected-product" href="#">Пломбир с апельсиновым джемом</a>
+			<p>1,5 кг х <span class="price">200 руб.</span></p>
+			<p>300 руб.</p>
+		</div>
+		<div class="order">
+			<button type="button" class="modal-close">Удалить заказ</button>
+			<a class="selected-product" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a>
+			<p>1,5 кг х <span class="price">300 руб.</span></p>
+			<p>450 руб.</p>
+		</div>
+		<hr>
+		<p>
+			<b><span class="total-price">Итого: 750 руб.</span></b>
+			<button class="button button-formalize-order">
+				<a href="#">Оформить заказ</a>
+			</button>
+		</p>
+	</section>
 </body>
 </html>
