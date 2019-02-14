@@ -11,6 +11,25 @@
 		<ul class="site-navigation">
 			<li>
 				<a href="catalog.html">Каталог</a>
+				<nav class="subdirectory-site-navigation" aria-label="Навигация подкаталогов раздела каталог">
+					<ul class="subdirectory-site-navigation-list">
+						<li>
+							<a class="subdirectory-site-navigation-item" href="novelties.html">Новинки</a>
+						</li>
+						<li>
+							<a href="#">Сливочное</a>
+						</li>
+						<li>
+							<a href="#">Щербеты</a>
+						</li>
+						<li>
+							<a href="#">Фруктовый лед</a>
+						</li>
+						<li>
+							<a href="#">Мелорин</a>
+						</li>
+					</ul>
+				</nav>
 			</li>
 			<li>
 				<a href="delivery.html">Доставка и оплата</a>
@@ -21,13 +40,13 @@
 		</ul>
 		<ul class="user-navigation">
 			<li class="user-search">
-				<a href="#">Поиск</a>
+				<a href="#" aria-label="кнопка поиска по сайту">Поиск</a>
 			</li>
 			<li class="user-logo">
-				<a href="">Вход</a>
+				<a href="#" aria-label="кнопка входа в личный кабинет">Вход</a>
 			</li>
 			<li class="user-basket">
-				<a href="">Корзина</a>
+				<a href="#" aria-label="кнопка входа в корзину">Пусто</a>
 			</li>
 		</ul>
 	</nav>
@@ -60,23 +79,29 @@
   	<section class="subscription">
   		<h2 class="visually-hidden">Подписка на рассылку</h2>
   		<p class="subscription-instruction">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-  		<!-- Здесь будет мини форма отправки -->
+  		<form name="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+  			<p>
+  				<label class="visually-hidden" for="">Электронная почта для подписки</label>
+  				<input class="subscription-icon-email" type="email" name="email" id="visually-hidden" placeholder="Электронная почта" >
+  			</p>
+  			<button class="button button-subscription" type="submit">Отправить</button>
+  		</form>
   	</section>
 </main>
 <footer class="main-footer">
 	<div class="footer-social">
 		<ul>
 			<li>
-				<a class="social-button" href="#">Твиттер</a>
+				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в твиттере">Твиттер</a>
 			</li>
 			<li>
-				<a class="social-button" href="#">Инстограм</a>
+				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в инстограмме">Инстограм</a>
 			</li>
 			<li>
-				<a class="social-button" href="#">Фейсбук</a>
+				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» на фейсбуке">Фейсбук</a>
 			</li>
 			<li>
-				<a class="social-button" href="#">Блоггер</a>
+				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в блоггер">Блоггер</a>
 			</li>
 		</ul>
 	</div>
@@ -105,5 +130,52 @@
 		<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
 	</div>
 </footer>
+<!-- Разметка для всплывающих окон (попап) -->
+<section class="modal modal-search">
+	<h2 class="visually-hidden">Поиск по сайту</h2>
+	<form name="search-form" action="https://echo.htmlacademy.ru" method="post">
+		<p>
+			<label class="visually-hidden" for="search-modal">Поиск</label>
+			<input type="search" name="search" id="search-modal" placeholder="Что ищем?" >
+		</p>
+	</form>	
+</section>
+<section class="modal modal-login">
+	<h2 class="visually-hidden">Личный кабинет</h2>
+	<form name="login-form" action="https://echo.htmlacademy.ru" method="post">
+		<p>
+			<label class="visually-hidden" for="user-email">Электронная почта</label>
+			<input type="email" class="login-icon-email" name="email" id="user-email" placeholder="Электронная почта" >
+		</p>
+		<p>
+			<label class="visually-hidden" for="user-password">Пароль</label>
+			<input type="password" name="password" class="user-icon-password" id="user-password" placeholder="Пароль" >
+		</p>
+		<button class="button buttom-login" type="submit">Войти</button>
+		<p class="registrations-info">
+			<a href="#">Забыли пароль?</a>
+			<a href="#">Новая регистрация</a>
+		</p>
+	</form>
+</section>
+<section class="modal modal-feedback">
+	<h2>Мы обязательно вам ответим!</h2>
+	<form name="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+		<p>
+			<label class="visually-hidden" for="feedback-name">Как Вас зовут?</label>
+			<input class="feedback-icon-name" type="text" name="name" id="feedback-name" placeholder="Как Вас зовут?" >
+		</p>
+		<p>
+			<label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
+			<input class="feedback-icon-email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?" >
+		</p>
+		<p>
+			<label class="visually-hidden" for="feedback-text">Напишите что-нибудь...</label>
+			<textarea rows="5" cols="30" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+		</p>
+		<button type="submit" class="buttom buttom-feedback">Отправить</button>
+	</form>
+	<button type="button" class="modal-closs">Закрыть</button>
+</section>
 </body>
 </html>
