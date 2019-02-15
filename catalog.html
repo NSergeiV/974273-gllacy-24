@@ -13,25 +13,23 @@
 			<ul class="site-navigation">
 				<li class="site-navigation-item">
 					<a href="catalog.html">Каталог</a>
-					<nav class="subdirectory-site-navigation" aria-label="Навигация подкаталогов раздела каталог">
-						<ul class="subdirectory-site-navigation-list">
-							<li>
-								<a class="subdirectory-site-navigation-item" href="novelties.html">Новинки</a>
-							</li>
-							<li>
-								<a href="#">Сливочное</a>
-							</li>
-							<li>
-								<a href="#">Щербеты</a>
-							</li>
-							<li>
-								<a href="#">Фруктовый лед</a>
-							</li>
-							<li>
-								<a href="#">Мелорин</a>
-							</li>
-						</ul>
-					</nav>
+					<ul class="subdirectory-site-navigation-list">
+						<li>
+							<a class="subdirectory-site-navigation-item" href="novelties.html">Новинки</a>
+						</li>
+						<li>
+							<a href="#">Сливочное</a>
+						</li>
+						<li>
+							<a href="#">Щербеты</a>
+						</li>
+						<li>
+							<a href="#">Фруктовый лед</a>
+						</li>
+						<li>
+							<a href="#">Мелорин</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a href="delivery.html">Доставка и оплата</a>
@@ -217,7 +215,7 @@
 					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» на фейсбуке">Фейсбук</a>
 				</li>
 				<li>
-					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в блоггер">Блоггер</a>
+					<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в ВКонтакте">ВКонтакте</a>
 				</li>
 			</ul>
 		</div>
@@ -249,25 +247,24 @@
 	<!-- Разметка для всплывающих окон (попап) -->
 	<section class="modal modal-basket">
 		<h2 class="visually-hidden">Ваши заказы</h2>
-		<div class="order">
-			<button type="button" class="modal-close">Удалить заказ</button>
-			<a class="selected-product" href="#">Пломбир с апельсиновым джемом</a>
-			<p>1,5 кг х <span class="price">200 руб.</span></p>
-			<p>300 руб.</p>
-		</div>
-		<div class="order">
-			<button type="button" class="modal-close">Удалить заказ</button>
-			<a class="selected-product" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a>
-			<p>1,5 кг х <span class="price">300 руб.</span></p>
-			<p>450 руб.</p>
-		</div>
-		<hr>
-		<p>
-			<b><span class="total-price">Итого: 750 руб.</span></b>
-			<button class="button button-formalize-order">
-				<a href="#">Оформить заказ</a>
-			</button>
-		</p>
+		<form name="order" action="https://echo.htmlacademy.ru" method="post">
+			<ul class="order-list">
+				<li class="order-item">
+					<a class="order-item-closs" href="#" aria-label="Кнопка удаления выбранного заказа">Удалить</a>
+					<a class="order-item-name" href="#" aria-label="Выбранный вами товар">Пломбир с апельсиновым джемом</a>
+					<p class="order-item-info">1,5 кг х <span>200 руб.</span></p>
+					<p class="order-item-price">300 руб.</p>
+				</li>
+				<li class="order-item">
+					<a class="order-item-closs" href="#" aria-label="Кнопка удаления выбранного заказа">Удалить</a>
+					<a class="order-item-name" href="#" aria-label="Выбранный вами товар">Клубничный пломбир с присыпкой  из белого шоколада</a>
+					<p class="order-item-info">1,5 кг х <span>300 руб.</span></p>
+					<p class="order-item-price">450 руб.</p>
+				</li>
+			</ul>
+			<p class="order-final-price"><b>Итого: 750 руб.</b></p>
+			<button class="buttom buttom-order" type="submit" name="next-order">Оформить заказ</button>
+		</form>
 	</section>
 </body>
 </html>
