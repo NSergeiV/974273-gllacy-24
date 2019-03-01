@@ -1,5 +1,16 @@
 /* CSS Document */
+html {
+	background-color: #ffffff;
+}
+
 body {
+	box-sizing: border-box;
+	
+	padding:  0 27px;
+	
+	width: 1200px;
+	margin: auto;
+	
 	font-family: Roboto, Arial, sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -12,6 +23,18 @@ body {
 
 a {
 	color: #ffffff;
+}
+
+.visually-hidden {
+	position: absolute;
+  	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	
 }
 
 .button {
@@ -41,10 +64,28 @@ a {
 	box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1.0);
 }
 
+.main-navigation {
+	width: 100%;
+	
+	display: flex;
+	align-items: center;
+}
+
 .site-navigation,
 .user-navigation,
 .subdirectory-site-navigation-list {
 	list-style: none;
+}
+
+.site-navigation {
+	margin: 0;
+	padding: 0;
+	margin-left: 24px;
+}
+
+.site-navigation li {
+	float: left;
+	margin-right: 30px;
 }
 
 .site-navigation a {
@@ -122,6 +163,19 @@ a {
 	font: inherit;
 }
 
+.user-navigation {
+	margin: 0;
+	padding: 0;
+	
+	margin-left: auto;
+}
+
+.user-navigation li {
+	float: left;
+	
+	margin-left: 10px;
+}
+
 .user-navigation a {
 	color: #ffffff;
 	text-decoration: none;
@@ -150,10 +204,6 @@ a {
 	background-color: #a1b4a9;
 }
 
-.inner-page {
-	width: 100%;
-}
-
 .user-basket-full a {
 	color: #323232;
 	
@@ -161,7 +211,23 @@ a {
 }
 
 .main-breadcrumbs-list {
+	display: flex;
+	
 	list-style: none;
+	
+	margin: 0;
+	padding: 0;
+}
+
+.main-breadcrumbs-list li {
+	float: left;
+	
+	margin-right: 22px;
+}
+
+.main-breadcrumbs-list p {
+	margin: 0;
+	padding: 0;
 }
 
 .main-breadcrumbs-list a:hover,
@@ -175,13 +241,24 @@ a {
 	line-height: 41px;
 }
 
+.main-catalog-goods {
+	width: 100%;
+	margin-bottom: 80px;
+}
+
 .catalog-goods-list {
 	list-style: none;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	margin: 0;
+	padding: 0;
 }
 
 .catalog-goods-list li {
-	width: 293px;
- 	height: 405px;
+	width: 267px;
 }
 
 .catalog-goods-list li:hover {
@@ -311,12 +388,32 @@ a {
 	line-height: 22px;
 	color: #323232;
 	
+	border-radius: 15px;
+	
+	padding: 27px 20px;
+	margin-bottom: 40px;
+	
 	background-image: url(../img/waffle-fon.png);
 	background-repeat: repeat;
 }
 
 .description-shop-list {
 	list-style: none;
+	
+	padding: 0;
+	margin: 0;
+	
+	display: flex;
+	flex-wrap:  wrap;
+	justify-content: space-between
+}
+
+.description-shop-list li {
+	width: 540px;
+	
+	padding-left: 50px;
+	
+	box-sizing: border-box;
 }
 
 .description-shop h1 {
@@ -328,6 +425,8 @@ a {
 .new {
 	color: #323232;
 	
+	border-radius: 15px;
+	
 	width: 560px;
 	height: 220px;
 	
@@ -335,6 +434,15 @@ a {
 	background-image: url(../img/strawberry_background.png);
 	background-repeat: no-repeat;
 	background-position: top center;
+}
+
+.new-subscription-wrapper {
+	display: flex;
+	justify-content: space-between;
+	
+	width: 100%;
+	
+	margin-bottom: 40px;
 }
 
 .new span {
@@ -350,13 +458,14 @@ a {
 	font-weight: bold;
 }
 
-.new p a:hover,
-.new p a:focus,
-.new p a:active {
+.new-serving:hover,
+.new-serving:focus,
+.new-serving:active {
 	color: #e84d37;
 }
 
 .subscription {
+	border-radius: 15px;
 	
 	width: 560px;
 	height: 220px;
@@ -398,12 +507,27 @@ a {
 
 .main-footer {
 	background-color: #849d8f;
+	
+	height: 103px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	border: 1px solid red;
 }
 
 .footer-social ul,
 .footer-info ul {
 	list-style: none;
 	text-align: center;
+	
+	margin: 0;
+	padding: 0;
+}
+
+.footer-social li {
+	float: left;
 }
 
 .footer-social a {
@@ -430,14 +554,31 @@ a {
 	background-color: #e9e9e9;
 }
 
+.footer-info {
+	width: 330px;
+}
+
 .footer-info a {
 	color: #ffffff;
 	line-height: 18px;
 	font-size: 13px;
 }
 
+.footer-info-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-info-list li {
+	padding-left: 23px;
+}
+
 .footer-info-item {
 	font-weight: bold;
+}
+
+li.footer-info-item-last {
+	padding-left: 36px;
 }
 
 .footer-info a:hover,
@@ -448,7 +589,13 @@ a {
 
 .footer-copyright {
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 10px;
+	font-style: normal;
+}
+
+.htmllogo {
+	margin: 0;
+	padding: 0;
 }
 
 .footer-copyright a:hover,
