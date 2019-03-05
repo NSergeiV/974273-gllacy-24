@@ -12,11 +12,12 @@
 	<nav class="main-navigation">
 		<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина по продажи мороженного «Gllacy»;" >
 		<ul class="site-navigation">
-			<li>
+			<li class="active">
 				<a class="site-navigation-item" href="catalog.html">Каталог</a>
-				<ul class="subdirectory-site-navigation-list visually-hidden">
+				<ul class="subdirectory-site-navigation-list ">
 					<li>
-						<a class="subdirectory-fon subdirectory-site-navigation-item" href="novelties.html">Новинки</a>
+						<a class="subdirectory-fon subdirectory-site-navigation-item subdirectory-border-top" href="novelties.html">Новинки</a>
+						<hr>
 					</li>
 					<li>
 						<a class="subdirectory-fon" href="catalog.html">Сливочное</a>
@@ -28,7 +29,7 @@
 						<a class="subdirectory-fon" href="#">Фруктовый лед</a>
 					</li>
 					<li>
-						<a class="subdirectory-fon" href="#">Мелорин</a>
+						<a class="subdirectory-fon subdirectory-border-bottom" href="#">Мелорин</a>
 					</li>
 				</ul>
 			</li>
@@ -40,14 +41,39 @@
 			</li>
 		</ul>
 		<ul class="user-navigation">
-			<li class="user-search">
-				<a href="#" aria-label="кнопка поиска по сайту">Поиск</a>
+			<li class="user-navigation-search">
+				<a class="user-search" href="#" aria-label="кнопка поиска по сайту"><span class="visually-hidden">Поиск</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></a>
+				<section class="modal modal-search">
+					<h2 class="visually-hidden">Поиск по сайту</h2>
+					<form name="search-form" action="https://echo.htmlacademy.ru" method="post">
+						<p>
+							<label class="visually-hidden" for="search-modal">Поиск</label>
+							<input type="search" name="search" id="search-modal" placeholder="Что ищем?" >
+						</p>
+					</form>	
+				</section>
 			</li>
-			<li class="user-logo">
-				<a href="#" aria-label="кнопка входа в личный кабинет">Вход</a>
+			<li class="user-navigation-inner">
+				<a class="user-logo" href="#" aria-label="кнопка входа в личный кабинет"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve"><g><polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/><path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/></g></svg>Вход</a>
+				<section class="modal modal-login">
+					<h2 class="visually-hidden">Личный кабинет</h2>
+					<form name="login-form" action="https://echo.htmlacademy.ru" method="post">
+						<label class="visually-hidden" for="user-email">Электронная почта</label>
+						<input type="email" class="login-icon-email" name="email" id="user-email" placeholder="Электронная почта" >
+						<label class="visually-hidden" for="user-password">Пароль</label>
+						<input type="password" name="password" class="user-icon-password" id="user-password" placeholder="Пароль" >
+						<div class="login-button">
+							<button class="button buttom-login" type="submit">Войти</button>
+							<p class="registrations-info">
+								<a href="#">Забыли пароль?</a>
+								<a href="#">Новая регистрация</a>
+							</p>
+						</div>
+					</form>
+				</section>
 			</li>
-			<li class="user-basket">
-				<a href="#" aria-label="кнопка входа в корзину">Пусто</a>
+			<li >
+				<a class="user-basket" href="#" aria-label="кнопка входа в корзину"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>Пусто</a>
 			</li>
 		</ul>
 	</nav>
@@ -68,7 +94,7 @@
   				</li>
   				<li class="description-logo-buy"><p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
   				</li>
-  				<li class="description-logo-ingredients"><p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+  				<li class="description-logo-thermometer"><p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
   				</li>
   			</ul>
   	</section>
@@ -83,39 +109,41 @@
   			</p>
   		</section>
   		<section class="subscription">
+  		<div class="subscription-nested">
   			<h2 class="visually-hidden">Подписка на рассылку</h2>
   			<p class="subscription-instruction">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
   			<form name="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-  				<p>
+  				<p class="subscription-form-input">
   					<label class="visually-hidden" for="subscription-email">Электронная почта для подписки</label>
   					<input class="subscription-icon-email" type="email" name="email" id="subscription-email" placeholder="Электронная почта" >
   				</p>
   				<button class="button button-subscription" type="submit">Отправить</button>
   			</form>
+		</div>
   		</section>
   	</div>
 </main>
 <footer class="main-footer">
 	<div class="footer-social">
-		<ul>
+		<ul class="footer-social-item">
 			<li>
-				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в твиттере">Твиттер</a>
+				<a class="social-button tvitter" href="#" aria-label="Страничка магазина «Gllacy» в твиттере"><span class="visually-hidden">Твиттер</span></a>
 			</li>
 			<li>
-				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в инстограмме">Инстограм</a>
+				<a class="social-button instagram" href="#" aria-label="Страничка магазина «Gllacy» в инстограмме"><span class="visually-hidden">Инстограм</span></a>
 			</li>
 			<li>
-				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» на фейсбуке">Фейсбук</a>
+				<a class="social-button facebook" href="#" aria-label="Страничка магазина «Gllacy» на фейсбуке"><span class="visually-hidden">Фейсбук</span></a>
 			</li>
 			<li>
-				<a class="social-button" href="#" aria-label="Страничка магазина «Gllacy» в ВКонтакте">ВКонтакте</a>
+				<a class="social-button vk" href="#" aria-label="Страничка магазина «Gllacy» в ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a>
 			</li>
 		</ul>
 	</div>
 	<div class="footer-info">
 		<ul class="footer-info-list">
 			<li class="footer-info-item">
-				<a href="#">Для поставщиков</a>
+				<a class="heart" href="#">Для поставщиков</a>
 			</li>
 			<li>
 				<a href="#">Наши документы</a>
@@ -130,39 +158,14 @@
 	</div>
 	<div class="footer-copyright">
 			<a class="htmllogo" href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип HTMLacademy" >
+				<img src="img/htmlacademy_logo.svg" width="108" height="39" alt="Логотип HTMLacademy" >
 			</a>
 		<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
 	</div>
 </footer>
 <!-- Разметка для всплывающих окон (попап) -->
-<section class="modal modal-search">
-	<h2 class="visually-hidden">Поиск по сайту</h2>
-	<form name="search-form" action="https://echo.htmlacademy.ru" method="post">
-		<p>
-			<label class="visually-hidden" for="search-modal">Поиск</label>
-			<input type="search" name="search" id="search-modal" placeholder="Что ищем?" >
-		</p>
-	</form>	
-</section>
-<section class="modal modal-login">
-	<h2 class="visually-hidden">Личный кабинет</h2>
-	<form name="login-form" action="https://echo.htmlacademy.ru" method="post">
-		<p>
-			<label class="visually-hidden" for="user-email">Электронная почта</label>
-			<input type="email" class="login-icon-email" name="email" id="user-email" placeholder="Электронная почта" >
-		</p>
-		<p>
-			<label class="visually-hidden" for="user-password">Пароль</label>
-			<input type="password" name="password" class="user-icon-password" id="user-password" placeholder="Пароль" >
-		</p>
-		<button class="button buttom-login" type="submit">Войти</button>
-		<p class="registrations-info">
-			<a href="#">Забыли пароль?</a>
-			<a href="#">Новая регистрация</a>
-		</p>
-	</form>
-</section>
+
+
 <section class="modal modal-feedback">
 	<h2>Мы обязательно вам ответим!</h2>
 	<form name="feedback-form" action="https://echo.htmlacademy.ru" method="post">
@@ -180,7 +183,7 @@
 		</p>
 		<button type="submit" class="button buttom-feedback">Отправить</button>
 	</form>
-	<button type="button" class="modal-closs">Закрыть</button>
+	<a class="modal-closs" href="#"><span class="visually-hidden">Закрыть</span></a>
 </section>
 </body>
 </html>
