@@ -1,5 +1,6 @@
 /* CSS Document */
 body {
+	padding-top: 10px;
 	font-family: Roboto, Arial, sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -105,7 +106,7 @@ a {
 }
 
 .site-navigation a.site-navigation-item {
-	text-decoration-color: #adbdb4;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -165,12 +166,6 @@ a {
 	display: none;
 }
 
-.subdirectory-site-navigation-list .subdirectory-fon {
-	text-decoration-color: rgba(0,0,0,1.00);
-	text-decoration-color: transparent;
-	text-decoration-style: dotted;
-}
-
 .active:hover .subdirectory-site-navigation-list {
 	position: absolute;
 	top: 37px;
@@ -190,6 +185,8 @@ a {
  	width: 143px;
 	
 	background-color: #f8f7f4;
+	
+	z-index: 10;
 }
 
 .subdirectory-site-navigation-list li {
@@ -458,7 +455,7 @@ a {
 
 .catalog-goods-item1 {
 	text-align: center;
-	text-decoration-color: #afbfb5;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-goods-list h3 {
@@ -474,7 +471,7 @@ a {
 .catalog-goods-item1:hover,
 .catalog-goods-item1:focus {
 	color: #ffbc9e;
-	text-decoration-color: #ffbc9e;
+	text-decoration-color: rgba(255, 204, 153, 0.3);
 }
 
 .modal {
@@ -697,8 +694,8 @@ li.user-navigation-search:hover .modal-search {
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	
-	wedth: 18px;
+
+	width: 18px;
 	height: 18px;
 	
 	border: none;
@@ -842,7 +839,7 @@ li.user-navigation-search:hover .modal-search {
 }
 
 .order-item-closs {
-	wedth: 11px;
+	width: 11px;
 	height: 11px;
 	
 	border: none;
@@ -1283,14 +1280,14 @@ li.footer-info-item-last {
 }
 
 .footer-info a {
-	text-decoration-color: #afbfb5;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-info a:hover,
 .footer-info a:focus,
 .footer-info a:active {
 	color: #ffbc9e;
-	text-decoration-color: #ffbc9e;
+	text-decoration-color: rgba(255, 204, 153, 0.3);
 }
 
 .footer-copyright {
@@ -1311,6 +1308,7 @@ li.footer-info-item-last {
 
 .footer-copyright a {
 	display: inline-block;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright img {
@@ -1326,4 +1324,6 @@ li.footer-info-item-last {
 .footer-copyright a:focus,
 .footer-copyright a:active {
 	color: #ffbc9e;
+	
+	text-decoration-color: rgba(255, 204, 153, 0.3);
 }
