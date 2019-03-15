@@ -123,6 +123,69 @@
  			</li>
  		</ul>
  		<h1>Сливочное мороженое</h1>
+ 		<section class="filter">
+ 			<form name="filter" action="https://echo.htmlacademy.ru" method="post">
+ 				<div class="filter-top-line">
+ 					<fieldset class="sort">
+					<legend>Сортировка:</legend>
+ 						<label for="sort" class="visually-hidden">Сортировка:</label>
+ 						<div class="styled-select"></div>
+ 						<select name="sort" id="sort">
+ 						
+ 							<option name="popularity" selected>по популярности</option>
+ 							<option name="new">по новизне</option>
+ 						</select>
+ 					</fieldset>
+ 					<fieldset class="price">
+ 						<legend>Цена:</legend>
+ 						<div class="range-filter">
+ 							<div class="range-controls">
+ 								<div class="scale">
+ 									<div class="bar"></div>
+ 								</div>
+ 								<div class="toggle toggle-min"></div>
+ 								<div class="toggle toggle-max"></div>
+ 							</div>
+ 							<div class="price-controls">
+ 								<label class="min-price"><input name="min-price" type="text" value="100"> руб.</label>
+            					<label class="max-price">- <input name="max-price" type="text" value="500"> руб.</label>
+ 							</div>
+ 						</div>
+ 					</fieldset>
+ 					<fieldset class="fatness">
+ 						<legend>Жирность:</legend>
+ 						<div class="fatness-wrapper">
+ 							<input id="fbtn-1" type="radio" name="fatness" value="0">
+ 							<label class="fatness0" for="fbtn-1">0%</label>
+ 							<input id="fbtn-2" type="radio" name="fatness" value="20" checked>
+ 							<label class="fatness10" for="fbtn-2">до 10%</label>
+ 							<input id="fbtn-3" type="radio" name="fatness" value="30">
+ 							<label class="fatness30" for="fbtn-3">до 30%</label>
+ 							<input id="fbtn-4" type="radio" name="fatness" value="40">
+ 							<label class="fatness40" for="fbtn-4">выше 30%</label>
+ 						</div>
+ 					</fieldset>
+ 				</div>
+ 				<div class="filter-bottom-line">
+ 					<fieldset class="fillers">
+ 						<legend>Наполнители:</legend>
+ 						<div class="fillers-wrapper">
+ 							<input id="filbtn-1" type="checkbox" name="chocolate" checked>
+ 							<label for="filbtn-1">шоколадные</label>
+ 							<input id="filbtn-2" type="checkbox" name="sugar-powder" checked>
+ 							<label for="filbtn-2">сахарные присыпки</label>
+ 							<input id="filbtn-3" type="checkbox" name="fruits" >
+ 							<label for="filbtn-3">фрукты</label>
+ 							<input id="filbtn-4" type="checkbox" name="syrups" >
+ 							<label for="filbtn-4">сиропы</label>
+ 							<input id="filbtn-5" type="checkbox" name="jams" >
+ 							<label for="filbtn-5">джемы</label>
+ 						</div>
+ 					</fieldset>
+ 					<button type="submit" name="send">Применить</button>
+ 				</div> 				
+ 			</form>
+ 		</section>
  		<section class="main-catalog-goods">
  			<h2 class="visually-hidden">Список мороженного</h2>
  			<ul class="catalog-goods-list">
@@ -272,6 +335,27 @@
  				</li>
  			</ul>
  		</section>
+ 		<div class="pagination">
+ 			<ul class="pagination-list">
+     			<li class="pagination-item">
+     				<div class="arrow-left">
+     					<div class="arrow-left-top"></div>
+     					<div class="arrow-left-bottom"></div>
+     				</div>
+     			</li>
+      			<li class="pagination-item-current"><a href="#">1</a></li>
+      			<li class="pagination-item"><a href="#">2</a></li>
+      			<li class="pagination-item"><a href="#">3</a></li>
+      			<li class="pagination-item"><a href="#">4</a></li>
+      			<li class="pagination-item"><a href="#">5</a></li>
+      			<li class="pagination-item">
+      				<div class="arrow-right">
+     					<div class="arrow-right-top"></div>
+     					<div class="arrow-right-bottom"></div>
+     				</div>
+      			</li>
+    		</ul>
+ 		</div>
 	</main>
  	<footer class="main-footer">
  		<div class="footer-block-wrapper">
