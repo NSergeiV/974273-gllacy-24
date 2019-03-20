@@ -939,8 +939,12 @@ label[for="filbtn-5"]:focus::before {
 	        justify-content: space-between;
 	
 	margin: 0;
-	margin-bottom: 41px;
+	margin-bottom: 1px;
 	padding: 0;
+}
+
+.inner-page .main-catalog-goods {
+	margin-bottom: 41px;
 }
 
 .catalog-goods-list li {
