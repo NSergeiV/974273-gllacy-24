@@ -158,16 +158,33 @@ a {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: bold;
-	text-decoration: underline;
+	text-decoration: none;
 	
 	border-radius: 16px;
 	
 	padding: 6px 14px;
 }
 
-.site-navigation a.site-navigation-item {
+.site-navigation-item::after {
+	content: "";
+	
+	display: block;
+	
+	height: 1px;
+	width: 100%;
+	
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*.site-navigation a.site-navigation-item {
 	-webkit-text-decoration-color: rgba(255, 255, 255, 0.3);
 	        text-decoration-color: rgba(255, 255, 255, 0.3);
+}*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .site-navigation a.site-navigation-item {
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+}
 }
 
 
@@ -1042,7 +1059,9 @@ label[for="filbtn-5"]:focus::before {
 
 .catalog-goods-item1 {
 	display: block;
+	
 	text-align: center;
+	
 	-webkit-text-decoration-color: rgba(255, 255, 255, 0.3);
 	        text-decoration-color: rgba(255, 255, 255, 0.3);
 }
@@ -1055,11 +1074,10 @@ label[for="filbtn-5"]:focus::before {
 .catalog-goods-list h3 {
 	font-size: 16px;
 	line-height: 22px;
-	
 	margin: 0;
 	margin: 13px 0px 14px 0px;
-	
 	padding: 0 6px;
+	font-weight: 500;
 }
 
 .catalog-goods-item1:hover,
@@ -1699,6 +1717,7 @@ li.user-navigation-search:hover .modal-search {
 .description-shop h1 {
 	font-size: 24px;
 	line-height: 28px;
+	font-weight: 500;
 	
 	margin: 0;
 	margin-bottom: 11px;
@@ -1867,15 +1886,18 @@ li.user-navigation-search:hover .modal-search {
 	padding-left: 14px;
 }
 
-.button-subscription {
-	width: 130px;
+button.button-subscription {
+	width: auto;
+	height: 44px;
 	
 	margin-left: 12px;
+	padding: 0 18px;
 	
 	font-size: 18px;
 	line-height: 24px;
+	font-weight: bold;
 	
-	padding: 10px 20px;
+	border-radius: 22px;
 }
 
 .subscription-nested input::-webkit-input-placeholder { color: #999999; font-weight: normal;}
